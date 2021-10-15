@@ -23,9 +23,9 @@ func main() {
 		log.Println(tempErr.Error())
 	}
 	log.Println(tempResp)
-	useageResp, usageErr := client.GetUsage()
+	usageResp, usageErr := client.GetUsage()
 	if usageErr != nil {
 		log.Println(usageErr.Error())
 	}
-	log.Println(useageResp)
+	log.Println(usageResp)
 }

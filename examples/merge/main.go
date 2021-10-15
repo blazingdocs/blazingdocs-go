@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	file, err := ioutil.ReadFile("../PO-Template.json")
+	file, _ := ioutil.ReadFile("../PO-Template.json")
 	s := string(file)
 	params := parameters.MergeParameters{
 		DataSourceName: "data",
@@ -20,9 +20,6 @@ func main() {
 		Strict:         true,
 		ParseColumns:   false,
 		Sequence:       false,
-	}
-	if err != nil {
-
 	}
 	ffile, _ := os.Open("../PO-Template.docx")
 	formFile := utils.FormFile{
