@@ -53,10 +53,10 @@ file, _ := ioutil.ReadFile("../PO-Template.json")
 s := string(file)
 
 params := parameters.MergeParameters{
-    DataSourceName: "data",
+    DataSourceName: "data", // data source name
     DataSourceType: utils.JSON_TYPE, // data in json format
     Strict:         true, // keep json types
-    ParseColumns:   false,
+    ParseColumns:   false, // true if data is csv file with column names
     Sequence:       false, // data is object
 }
 
