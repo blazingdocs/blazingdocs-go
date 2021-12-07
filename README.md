@@ -54,10 +54,10 @@ s := string(file)
 
 params := parameters.MergeParameters{
     DataSourceName: "data",
-    DataSourceType: utils.JSON_TYPE,
-    Strict:         true,
+    DataSourceType: utils.JSON_TYPE, // data in json format
+    Strict:         true, // keep json types
     ParseColumns:   false,
-    Sequence:       false,
+    Sequence:       false, // data is object
 }
 
 ffile, _ := os.Open("../PO-Template.docx")
