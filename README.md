@@ -5,7 +5,7 @@ High-performance document generation API. Generate documents and reports from С
 
 ```go
 import (
-    blazingdocsgo "github.com/blazingdocs/blazingdocs-go"
+    "github.com/blazingdocs/blazingdocs-go"
     "github.com/blazingdocs/blazingdocs-go/config"
 )
 ```
@@ -22,7 +22,7 @@ You can get your API Key at https://app.blazingdocs.com
 
 ```go
 config.Default = config.Init("YOUR-API-KEY")
-client := blazingdocsgo.Client{
+client := blazingdocs.Client{
     Config: *config.Default,
 }
 ```
@@ -67,7 +67,7 @@ formFile := utils.FormFile{
 }
 
 config.Default = config.Init("YOUR-API-KEY")
-client := blazingdocsgo.Client{
+client := blazingdocs.Client{
     Config: *config.Default,
 }
 

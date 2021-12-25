@@ -3,13 +3,13 @@ package main
 import (
 	"log"
 
-	blazingdocsgo "github.com/blazingdocs/blazingdocs-go"
+	"github.com/blazingdocs/blazingdocs-go"
 	"github.com/blazingdocs/blazingdocs-go/config"
 )
 
 func main() {
 	config.Default = config.Init("YOUR-API-KEY")
-	client := blazingdocsgo.Client{
+	client := blazingdocs.Client{
 		Config: *config.Default,
 	}
 	resp, err := client.GetAccount()

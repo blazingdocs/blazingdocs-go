@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	blazingdocsgo "github.com/blazingdocs/blazingdocs-go"
+	"github.com/blazingdocs/blazingdocs-go"
 	"github.com/blazingdocs/blazingdocs-go/config"
 	"github.com/blazingdocs/blazingdocs-go/parameters"
 	"github.com/blazingdocs/blazingdocs-go/utils"
@@ -30,7 +30,7 @@ func main() {
 		Content: ffile,
 	}
 	config.Default = config.Init("YOUR-API-KEY")
-	client := blazingdocsgo.Client{
+	client := blazingdocs.Client{
 		Config: *config.Default,
 	}
 	resp, err := client.MergeWithFile(s, "output.pdf", params, formFile)

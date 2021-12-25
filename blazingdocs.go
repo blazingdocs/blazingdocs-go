@@ -1,4 +1,4 @@
-package blazingdocsgo
+package blazingdocs
 
 import (
 	"bytes"
